@@ -38,3 +38,15 @@
 // [x,y] = [y,x];
 
 // console.log(`X:${x}  Y:${y}`);
+
+//arguments
+// function add(){
+//     let sum = 0;
+//     for(let z of arguments){
+//         sum+=z;
+//     }
+//     console.log("SUM:",sum)
+//     console.log(arguments instanceof Array)
+// }
+
+// add(1,2,3,4,5)
