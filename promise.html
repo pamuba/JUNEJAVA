@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let url = "http://127.0.0.1:5500/bore.jpg";
+        const loadImage = url => {
+            return new Promise(function (resolve, reject) {
+                alert(url);
+                //Open a new XHR  AJAX
+                var request = new XMLHttpRequest();
+                request.open('GET', url, true);
+                request.responseType    = "arraybuffer";
+                // When the request loads, check whether it was successful
+
+                request.send();
+                
+                request.onload = function () {
+                    if (request.status === 200) {
+                        // If successful, resolve the promise
+                        resolve(request.response);
+                    } else {
+                        // Otherwise, reject the promise
+                        reject(Error('An error occurred while loading image. error code:' + request.statusText));
+                    }
+                };
+
+                
+            });
+
+        };
+
+        const embedImage = url => {
+            loadImage(url).then(function (result) {
+                const img = new Image();
+                var binaryData = [];
+                binaryData.push(result);
+                var imageURL = window.URL.createObjectURL(new Blob(binaryData, {type: "Image/jpeg"}));
+                img.src = imageURL;
+                document.querySelector('body').appendChild(img);
+                },
+                function (err) {
+                    console.log(err);
+                });
+        }
+        embedImage(url);
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const promise = new Promise((resolve, reject) => {
+            const request = new XMLHttpRequest();
+
+            request.open('GET', 'http://dummy.restapiexample.com/api/v1/employees');
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response); // we got data here, so resolve the Promise
+                } else {
+                    reject(Error(request.statusText)); // status is not 200 OK, so reject
+                }
+            };
+
+            request.onerror = () => {
+                reject(Error('Error fetching data.')); // error occurred, reject the  Promise
+            };
+
+            request.send(); // send the request
+        });
+
+        console.log('Asynchronous request made.');
+
+        promise.then((data) => {
+            console.log('Got data! Promise fulfilled.');
+            document.body.textContent = JSON.parse(data).data[0]["employee_name"];
+        }, (error) => {
+            console.log('Promise rejected.');
+            console.log(error.message);
+        });
+    </script>
+</body>
+
+</html>
