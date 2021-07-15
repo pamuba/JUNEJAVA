@@ -8,4 +8,5 @@ var myApp = angular
                         logo:'bore.jpg'
                     };
                     $scope.employee = employee;
+                    $scope.msg = "Hello"
                 });
