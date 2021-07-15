@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div ng-controller="myController">
+         <div>
+             First name:{{employee.firstName}}
+         </div>
+         <div>
+             Last name:{{employee.lastName}}
+         </div>
+         <div>
+             Gender:{{employee.gender}}
+         </div>
+         <div>
+             <img ng-src="{{employee.logo}}" alt="No Image">
+         </div>
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
