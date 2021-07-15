@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <script type="text/ng-template" id="my-info-msg.html">
+        <b>{{msg}}</b>
+    </script> -->
+
+    <div  ng-controller="emp">
+        <div my-info-msg></div>
+        <my-info-msg></my-info-msg>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="directives.js"></script>
+</body>
+</html>

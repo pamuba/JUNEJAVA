@@ -25,4 +25,5 @@ var myApp = angular
                     ];
                     $scope.employees = employees;
                     $scope.rowCount = 3;
+                    $scope.hideSalary = true;
                 });

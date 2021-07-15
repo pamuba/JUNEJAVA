@@ -14,6 +14,8 @@
 </head>
 <body  ng-controller="myController">
     Rows to display:<input type="number"  min="0" max="5" step="1" ng-model="rowCount"/>
+    <hr>
+    <input type="checkbox" ng-model="hideSalary">Hide Salary
     <table>
         <thead>
             <tr>
@@ -30,7 +32,8 @@
                 <td>{{emp.dateOfBirth | date:"dd/MMMM/yyyy"}}</td>
                 <td>{{emp.gender}}</td>
                 <td>{{emp.salary | number:2}}</td>
-                <td>{{emp.salary | currency:'€':2}}</td>
+                <td ng-show="hideSalary">{{emp.salary | currency:'€':2}}</td>
+                <td ng-hide="hideSalary">######</td>
             </tr>
         </tbody>
     </table>
