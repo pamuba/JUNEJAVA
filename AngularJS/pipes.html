@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        table,tr,td,th{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body  ng-controller="myController">
+    Rows to display:<input type="number"  min="0" max="5" step="1" ng-model="rowCount"/>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date Of Birth</th>
+                <th>Gender</th>
+                <th>Salary(number filter)</th>
+                <th>Salary(currency filter)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp in employees | limitTo:rowCount">
+                <td>{{emp.name | uppercase}}</td>
+                <td>{{emp.dateOfBirth | date:"dd/MMMM/yyyy"}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.salary | number:2}}</td>
+                <td>{{emp.salary | currency:'€':2}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="pipes.js"></script>
+</body>
+</html>
