@@ -1,0 +1,7 @@
+Structural Directives:
+1. ngIf
+2. ngSwitch
+3. ngFor
+
+display:"hidden"
+

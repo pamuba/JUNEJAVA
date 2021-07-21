@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
   <div>
     <h1>Angular App</h1>
-    <stylebinding></stylebinding>
+    <communicaton (childEvent)="message=$event" [parentData]="name"></communicaton>
+    <hr>
+    <h2>{{message}}</h2>
+    <greet>
+      <h1>Hello World For Content Projection</h1>
+      <button>Login</button>
+      <p>Sending in HTML Content</p>
+    </greet>
+    <hr>
+    <pipes></pipes>
   </div>
   `,
   styles: [`
@@ -20,5 +29,9 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
+
+  public message;
+
+  public name = "John Smith"
   title = 'angular9';
 }
