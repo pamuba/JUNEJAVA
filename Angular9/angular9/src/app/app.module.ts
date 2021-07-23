@@ -11,6 +11,10 @@ import { StructuralComponent } from './structural/structural.component';
 import { CommunicatonComponent } from './communicaton/communicaton.component';
 import { GreetComponentComponent } from './greet-component/greet-component.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,13 +26,16 @@ import { PipesComponent } from './pipes/pipes.component';
     StructuralComponent,
     CommunicatonComponent,
     GreetComponentComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

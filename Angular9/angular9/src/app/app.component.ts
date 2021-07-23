@@ -5,16 +5,9 @@ import { Component, Input } from '@angular/core';
   template: `
   <div>
     <h1>Angular App</h1>
-    <communicaton (childEvent)="message=$event" [parentData]="name"></communicaton>
+    <employee-list></employee-list>
     <hr>
-    <h2>{{message}}</h2>
-    <greet>
-      <h1>Hello World For Content Projection</h1>
-      <button>Login</button>
-      <p>Sending in HTML Content</p>
-    </greet>
-    <hr>
-    <pipes></pipes>
+    <employee-detail></employee-detail>
   </div>
   `,
   styles: [`
