@@ -8,6 +8,13 @@ import { Component, Input } from '@angular/core';
     <employee-list></employee-list>
     <hr>
     <employee-detail></employee-detail>
+    <hr>
+    <nav>
+      <a routerLink="/departments" routerActive="active">Departments</a>
+      <a routerLink="/employees" routerActive="active">Employees</a>
+    </nav>
+    <hr>
+    <router-outlet></router-outlet>
   </div>
   `,
   styles: [`
