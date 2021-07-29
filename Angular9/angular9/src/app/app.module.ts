@@ -15,6 +15,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 
 
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeListComponent,
     EmployeeDetailComponent,
     routingComponents,
+    ServerComponent,
+    ServersComponent,
   ],
   imports: [
     BrowserModule,

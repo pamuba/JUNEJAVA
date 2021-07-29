@@ -3,35 +3,36 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <div>
-    <h1>Angular App</h1>
-    <employee-list></employee-list>
-    <hr>
-    <employee-detail></employee-detail>
-    <hr>
-    <nav>
-      <a routerLink="/departments" routerActive="active">Departments</a>
-      <a routerLink="/employees" routerActive="active">Employees</a>
-    </nav>
-    <hr>
-    <router-outlet></router-outlet>
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="title">I'm in the AppComponent!</h3>
+
+      <app-servers></app-servers>
+    </div>
   </div>
+  </div>
+
   `,
   styles: [`
-  
-  div{
-    color:blue;
+
+  div {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
   }
+  
+  .title {
+    border-color: cyan;
+  }
+  
 
   `]
 })
 export class AppComponent {
 
   public message;
-
-  public name = "John Smith"
-  title = 'angular9';
+  
+  // public name = "John Smith"
+ 
+  name = "Monica";
+  title = "Angular-app";
 }
