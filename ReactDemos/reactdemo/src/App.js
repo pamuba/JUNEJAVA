@@ -12,7 +12,15 @@ import ParentComp from './components/ParentComp';
 import RefsDemo from './components/RefsDemo';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
-import 
+import ErrorBoundary from './components/ErrorBoundary'
+import ErrorBoundaryImp from './components/ErrorBoundaryImp';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/UserContext';
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
+import UseStates from './components/UseStates';
+
+
 function App() {
   return (
     <div className="App">
@@ -35,7 +43,24 @@ function App() {
        {/* <ClickCounter></ClickCounter>
        <HoverCounter></HoverCounter> */}
 
-       <ErrorBoundary></ErrorBoundary>
+      {/* <ErrorBoundaryImp>
+        <ErrorBoundary heroName="Batman"></ErrorBoundary>
+      </ErrorBoundaryImp>
+
+      <ErrorBoundaryImp>
+        <ErrorBoundary heroName="Superman"></ErrorBoundary>
+      </ErrorBoundaryImp>
+
+      <ErrorBoundaryImp>
+        <ErrorBoundary heroName="Joker"></ErrorBoundary>
+      </ErrorBoundaryImp> */}
+
+     {/* <UserProvider value="Superman">
+      <ComponentC></ComponentC>
+     </UserProvider> */}
+     {/* <PostList></PostList> */}
+     {/* <PostForm></PostForm> */}
+     <UseStates></UseStates>
       </header>
     </div>
   );
