@@ -1,0 +1,36 @@
+LifeCycle Methods/Hooks:
+1. Mounting: component is created and inserted into the DOM
+2. Updating: component is re rendered(either props/state values are changed)
+3. Unmounting: component is removed from the DOM
+4. Error Handling: error in a LifeCycle Methods,
+                    or in the constructor of any child component
+
+1. Mounting: constructor, static getDerivedStateFromProps, render, componentDidMount
+2. Updating: static getDerivedStateFromProps, shouldComponentUpdate , render, 
+getSnapshotBeforeUpdate, componentDidUpdate
+3. Unmounting: componentWillUnmount
+4. Error Handling: getDerivedStateFromError, componentDidCatch
+
+//////////////////////////////////////////////
+RegComp: does not implement shouldComponentUpdate, always returns true by default
+PureComp: implements shouldComponentUpdate(shallow props + state comparison)
+
+{a:1} {a:3}
+
+SC prevState and currentState
+SC prevProps and currentProps
+
+///////////////////////////////////////////////////////
+memo
+/////////////////////////////////////////////////////
+Refs
+
+//////////////////////////////////////////////////
+Error Boundary: its a class that implements either of
+getDerivedStateFromError or componentDidCatch
+
+static getDerivedStateFromError: creats a fallback UI after an error
+is thrown 
+
+componentDidCatch: is used to log the error information
+

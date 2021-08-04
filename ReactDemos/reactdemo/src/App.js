@@ -5,6 +5,14 @@ import  Greet  from './components/Greet'
 import Message from './components/Message';
 import ParentComponent from './components/ParentComponent';
 import Welcome from './components/Welcome'
+import ControlledComponents from './components/ControlledComponents'
+import PureComp from './components/PureComp';
+import RegComp from './components/RegComp';
+import ParentComp from './components/ParentComp';
+import RefsDemo from './components/RefsDemo';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import 
 function App() {
   return (
     <div className="App">
@@ -20,7 +28,14 @@ function App() {
         {/* <Welcome name="Diana" heroName="Wonder Women"></Welcome> */}
         {/* <Counter></Counter> */}
         {/* <EventBind></EventBind> */}
-        <ParentComponent></ParentComponent>
+        {/* <ParentComponent></ParentComponent> */}
+        {/* <ControlledComponents></ControlledComponents> */}
+       {/* <ParentComp></ParentComp> */}
+       {/* <RefsDemo></RefsDemo> */}
+       {/* <ClickCounter></ClickCounter>
+       <HoverCounter></HoverCounter> */}
+
+       <ErrorBoundary></ErrorBoundary>
       </header>
     </div>
   );
