@@ -19,6 +19,8 @@ import { UserProvider } from './components/UserContext';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
 import UseStates from './components/UseStates';
+import ClassCounterOne from './components/ClassCounterOne'
+import HookCounterOne from './components/HookCounterOne'
 
 
 function App() {
@@ -55,12 +57,15 @@ function App() {
         <ErrorBoundary heroName="Joker"></ErrorBoundary>
       </ErrorBoundaryImp> */}
 
-     {/* <UserProvider value="Superman">
+     <UserProvider value="Superman">
       <ComponentC></ComponentC>
-     </UserProvider> */}
+     </UserProvider>
      {/* <PostList></PostList> */}
      {/* <PostForm></PostForm> */}
-     <UseStates></UseStates>
+     {/* <UseStates></UseStates> */}
+
+     {/* <ClassCounterOne></ClassCounterOne> */}
+     {/* <HookCounterOne></HookCounterOne> */}
       </header>
     </div>
   );
